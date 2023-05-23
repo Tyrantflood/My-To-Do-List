@@ -14,12 +14,14 @@
 
 body {
   background-color: #374151;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .container {
-  margin: 0 auto;
+  margin-top: 1 20px;
+  margin: auto;
   width: 500px;
   height: 100%;
   border: solid 3px var(--darkest);
@@ -35,6 +37,7 @@ h1 {
   margin-bottom: 2 rem;
   height: 60px;
   color: var(--grey);
+  text-align: center;
 }
 
 #task {
@@ -42,8 +45,10 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  padding: 1rem 1rem;
+  margin: auto;
   font-size: 25px;
-  margin-bottom: 2 rem;
   color: var(--darkest);
 }
 .task-list {
@@ -64,12 +69,17 @@ button {
   background-color: var(--darker);
   padding: 1rem;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 1.125rem;
   -webkit-text-fill-color: var(--grey);
+}
+
+#what-to-do:focus::-webkit-input-placeholder {
+  -webkit-text-fill-color: transparent;
 }
 
 #add-task {
   font-size: 25px;
+  color: rgb(130, 172, 251);
   transition: 0.4s;
   cursor: pointer;
 }
@@ -94,15 +104,49 @@ main {
 #things {
   display: flex;
   justify-content: space-between;
-  background-color: var(--darker);
+  background-color: var(--darkest);
   border-radius: 1rem;
   padding: 10px;
   margin-bottom: 1 rem;
 }
 
-#task-content text {
-  color: var(--white);
+.task-content .text {
   display: block;
   font-size: 1.125rem;
   transition: 0.4s;
+  -webkit-text-fill-color: var(--white);
+}
+
+.task-content .text:not(:read-only) {
+  -webkit-text-fill-color: cyan;
+}
+
+.task-actions {
+  display: flex;
+  font-size: 1.125rem;
+  transition: 0.4s;
+}
+
+.edit {
+  -webkit-text-fill-color: crimson;
+}
+
+.delete {
+  -webkit-text-fill-color: cornflowerblue;
+}
+
+.edit:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.delete:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.edit:active {
+  opacity: 0.4;
+}
+.delete:active {
+  opacity: 0.4;
 }
