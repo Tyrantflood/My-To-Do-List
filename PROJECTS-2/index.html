@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header id="to-do-list">
+        <h1>My To Do List</h1>
+        <form id="task">
+          <input type="text" id="what-to-do" placeholder="Add your Task." />
+          <button type="submit" id="add-task">Add</button>
+        </form>
+      </header>
+
+      <main>
+        <section id="task-list">
+          <div class="task-list">
+            <h2>Things To Do</h2>
+            <div id="task-content">
+              <input
+                type="text"
+                class="text"
+                value="Something to do"
+                readonly
+              />
+            </div>
+            <div id="task-actions">
+              <button id="edit">Edit</button>
+              <button id="delete">Delete</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #687280;
+  --white: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: #374151;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  border: solid 3px var(--darkest);
+}
+
+
+.task-list {
+  display: flex;
+}
