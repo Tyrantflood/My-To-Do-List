@@ -21,10 +21,88 @@ body {
 .container {
   margin: 0 auto;
   width: 500px;
+  height: 100%;
   border: solid 3px var(--darkest);
 }
+header {
+  padding: 2rem 1rem;
+  width: 100%;
+  margin: auto;
+}
 
+h1 {
+  font-weight: 300;
+  margin-bottom: 2 rem;
+  height: 60px;
+  color: var(--grey);
+}
 
-.task-list {
+#task {
   display: flex;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 2 rem;
+  color: var(--darkest);
+}
+.task-list {
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+  appearance: none;
+}
+
+#what-to-do {
+  flex: 1 1 0%;
+  background-color: var(--darker);
+  padding: 1rem;
+  border-radius: 20px;
+  font-size: 13px;
+  -webkit-text-fill-color: var(--grey);
+}
+
+#add-task {
+  font-size: 25px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#add-task:hover {
+  opacity: 0.5;
+}
+
+#add-task:active {
+  color: var(--white);
+  opacity: 0.2;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: 2 rem 1 rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#things {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darker);
+  border-radius: 1rem;
+  padding: 10px;
+  margin-bottom: 1 rem;
+}
+
+#task-content text {
+  color: var(--white);
+  display: block;
+  font-size: 1.125rem;
+  transition: 0.4s;
 }
