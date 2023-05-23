@@ -12,17 +12,22 @@
       <header id="to-do-list">
         <h1>My To Do List</h1>
         <form id="task">
-          <input type="text" id="what-to-do" placeholder="Add your Task." />
-          <button type="submit" id="add-task">Add</button>
+          <input
+            required
+            type="text"
+            id="what-to-do"
+            placeholder="Add your Task."
+          />
+          <input type="submit" id="add-task" value="ADD" />
         </form>
       </header>
 
       <main>
         <section id="task-list">
+          <h2>Things To Do</h2>
           <div class="task-list">
-            <h2>Things To Do</h2>
             <div id="things">
-              <div id="task-content">
+              <div class="task-content">
                 <input
                   type="text"
                   class="text"
@@ -30,9 +35,9 @@
                   readonly
                 />
               </div>
-              <div id="task-actions">
-                <button id="edit">Edit</button>
-                <button id="delete">Delete</button>
+              <div class="task-actions">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
               </div>
             </div>
           </div>
