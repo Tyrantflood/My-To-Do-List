@@ -17,16 +17,13 @@ window.addEventListener("load", () => {
     const task_content_el = document.createElement("div");
     task_content_el.classList.add("task-content");
 
-    task_content_el.innerText = task;
-
     task_el.appendChild(task_content_el);
-    list_el.appendChild(task_el);
 
     const task_input_el = document.createElement("input");
     task_input_el.classList.add("text");
     task_input_el.type = "text";
     task_input_el.value = task;
-    task_input_el.setAttribute(("readonly", "readonly"));
+    task_input_el.setAttribute("readonly", "readonly");
 
     task_content_el.appendChild(task_input_el);
 
@@ -45,5 +42,24 @@ window.addEventListener("load", () => {
     task_action_el.appendChild(task_delete);
 
     task_el.appendChild(task_action_el);
+
+    input.value = "";
+
+    list_el.appendChild(task_el);
+
+    task_edit.addEventListener("click", () => {
+      if (task_edit.innerText.toLowerCase() == "edit") {
+        task_input_el.removeAttribute("readonly");
+        task_input_el.focus();
+        task_edit.innerText = "Save";
+      } else {
+        task_input_el.setAttribute("readonly", "readonly");
+        task_edit.innerText = "Edit";
+      }
+    });
+
+    task_delete.addEventListener("click", () => {
+      list_el.removeChild(task_el);
+    });
   });
 });
