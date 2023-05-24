@@ -13,6 +13,7 @@
 }
 
 body {
+  /* color: var(--white); */
   background-color: #374151;
   height: 100vh;
   padding-top: 15px;
@@ -34,7 +35,7 @@ header {
 
 h1 {
   font-weight: 300;
-  margin-bottom: 2 rem;
+  margin-bottom: 2rem;
   height: 60px;
   color: var(--grey);
   text-align: center;
@@ -50,10 +51,6 @@ h2 {
   margin: auto;
   font-size: 25px;
   color: var(--darkest);
-}
-.task-list {
-  padding: 2rem 1rem;
-  margin: auto;
 }
 
 input,
@@ -95,22 +92,22 @@ button {
 
 main {
   flex: 1 1 0%;
-  padding: 2 rem 1 rem;
+  padding: 2rem 1rem;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
 }
 
-#things {
+.task-list {
   display: flex;
   justify-content: space-between;
   background-color: var(--darkest);
   border-radius: 1rem;
   padding: 10px;
-  margin-bottom: 1 rem;
+  margin-bottom: 1rem;
 }
 
-.task-content .text {
+.text {
   display: block;
   font-size: 1.125rem;
   transition: 0.4s;
@@ -120,6 +117,10 @@ main {
 .task-content .text:not(:read-only) {
   -webkit-text-fill-color: cyan;
 }
+
+/* .task-content .text:not(:read-only):focus::-webkit-input {
+  -webkit-text-fill-color: transparent;
+} */
 
 .task-actions {
   display: flex;
