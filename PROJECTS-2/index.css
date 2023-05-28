@@ -112,6 +112,9 @@ main {
 
 .text {
   display: block;
+  /* resize: both;
+  overflow: auto;
+  width: 100%; */
   font-size: 1.125rem;
   transition: 0.4s;
   -webkit-text-fill-color: var(--white);
@@ -121,9 +124,14 @@ main {
   -webkit-text-fill-color: cyan;
 }
 
-/* .task-content .text:not(:read-only):focus::-webkit-input {
-  -webkit-text-fill-color: transparent;
-} */
+.task-content .text {
+  border: none;
+  background-color: transparent;
+}
+
+.task-content .text:focus {
+  background-color: var(--darker);
+}
 
 .task-actions {
   display: flex;
