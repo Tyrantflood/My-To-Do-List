@@ -71,6 +71,7 @@ button {
   border-radius: 20px;
   font-size: 1.125rem;
   -webkit-text-fill-color: var(--grey);
+  caret-color: #fff;
 }
 
 #what-to-do:focus::-webkit-input-placeholder {
@@ -121,16 +122,13 @@ main {
 }
 
 .task-content .text:not(:read-only) {
+  caret-color: cyan;
   -webkit-text-fill-color: cyan;
 }
 
 .task-content .text {
   border: none;
   background-color: transparent;
-}
-
-.task-content .text:focus {
-  background-color: var(--darker);
 }
 
 .task-actions {
